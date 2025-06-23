@@ -8,10 +8,7 @@ function NavigateBackButton ()
 	return (
 		<button
 			onClick={() => navigate(-1)}
-			className={styles.button}
-		>
-			Go Back
-		</button>
+			className={styles.button}>Back</button>
 	);
 }
 
