@@ -41,29 +41,71 @@ const ConstructionPage = () => {
     }
   };
 
+//   return (
+//     <form id="submission" onSubmit={handleSubmit}>
+//       <div>
+//         <label>Name Your Spacecraft:</label>
+//         <textarea value={name} onChange={e => setName(e.target.value)} />
+//         {errors.name && <p style={{ color: "red" }}>{errors.name}</p>}
+//       </div>
+//       <br />
+//       <div>
+//         <label>Capacity of Spacecraft:</label>
+//         <textarea value={capacity} onChange={e => setCapacity(e.target.value)} type="number" />
+//         {errors.capacity && <p style={{ color: "red" }}>{errors.capacity}</p>}
+//       </div>
+//       <br />
+//         <div>
+//         <label>Paste the Picture URL :</label>
+//         <textarea value={pictureUrl} onChange={e => setPictureUrl(e.target.value)} />
+//       </div>
+//       <br />
+//       <div>
+//         <label>Description of Spacecraft:</label>
+//         <textarea value={description} onChange={e => setDescription(e.target.value)} />
+//         {errors.description && <p style={{ color: "red" }}>{errors.description}</p>}
+//       </div>
+//       <br />
+//       <button type="submit">Build Spacecraft</button>
+//     </form>
+//   );
+// };
+
+// export default ConstructionPage;
+
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label>Name</label>
-        <input value={name} onChange={e => setName(e.target.value)} />
-        {errors.name && <p style={{ color: "red" }}>{errors.name}</p>}
-      </div>
-      <div>
-        <label>Capacity</label>
-        <input value={capacity} onChange={e => setCapacity(e.target.value)} type="number" />
-        {errors.capacity && <p style={{ color: "red" }}>{errors.capacity}</p>}
-      </div>
-      <div>
-        <label>Description</label>
-        <textarea value={description} onChange={e => setDescription(e.target.value)} />
-        {errors.description && <p style={{ color: "red" }}>{errors.description}</p>}
-      </div>
-      <div>
-        <label>Picture URL (optional)</label>
-        <input value={pictureUrl} onChange={e => setPictureUrl(e.target.value)} />
-      </div>
-      <button type="submit">Build Spacecraft</button>
-    </form>
+    <div style={{ maxWidth: "600px", margin: "2rem auto", padding: "1rem" }}>
+      <h1 style={{ textAlign: "center", marginBottom: "2rem" }}>
+        Build Your Spacecraft!
+      </h1>
+
+      <form id="submission" onSubmit={handleSubmit}>
+        <div>
+          <label>Name Your Spacecraft:</label>
+          <textarea value={name} onChange={e => setName(e.target.value)} />
+          {errors.name && <p style={{ color: "red" }}>{errors.name}</p>}
+        </div>
+        <br />
+        <div>
+          <label>Capacity of Spacecraft:</label>
+          <textarea value={capacity} onChange={e => setCapacity(e.target.value)} type="number" />
+          {errors.capacity && <p style={{ color: "red" }}>{errors.capacity}</p>}
+        </div>
+        <br />
+        <div>
+          <label>Paste the Picture URL :</label>
+          <textarea value={pictureUrl} onChange={e => setPictureUrl(e.target.value)} />
+        </div>
+        <br />
+        <div>
+          <label>Description of Spacecraft:</label>
+          <textarea value={description} onChange={e => setDescription(e.target.value)} />
+          {errors.description && <p style={{ color: "red" }}>{errors.description}</p>}
+        </div>
+        <br />
+        <button type="submit">Build Spacecraft</button>
+      </form>
+    </div>
   );
 };
 
